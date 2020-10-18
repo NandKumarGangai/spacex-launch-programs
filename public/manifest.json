@@ -1,0 +1,16 @@
+{
+    "name": "SpaceX Launch Programs",
+    "short_name": "SpaceX Launch Programs",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#90cdf4",
+    "theme_color": "#90cdf4",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "./favicon.ico",
+        "type": "image/png",
+        "sizes": "72x72"
+      }
+    ]
+  }
