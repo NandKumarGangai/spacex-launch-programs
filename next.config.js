@@ -19,18 +19,3 @@ module.exports = withSass(
     })
   )
 );
-
-// module.exports = withSass();
-
-// module.exports = {
-//   withSass: withSass(),
-//   withMDX: withMDX(
-//     withPWA({
-//       pageExtensions: ['js', 'mdx'],
-//       pwa: {
-//         disable: !isProd,
-//         dest: 'public',
-//       },
-//     })
-//   ),
-// };
