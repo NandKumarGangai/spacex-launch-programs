@@ -24,8 +24,11 @@ npm run start
 **Live: https://spacex-launch-programs9.herokuapp.com/**
 
 ### Lighthouse report
-1. Mobile 
+1. Mobile
+![alt text](https://github.com/NandKumarGangai/spacex-launch-programs/blob/main/lighthouse_report/mobile.png?raw=true)
+
+
 2. Desktop
-![alt text](https://github.com/NandKumarGangai/spacex-launch-programs/blob/main/desktop.png?raw=true)
+![alt text](https://github.com/NandKumarGangai/spacex-launch-programs/blob/main/lighthouse_report/desktop.png?raw=true)
 
 
