@@ -7,7 +7,7 @@ import './style.module.scss';
 const LaunchPrograms = dynamic(() => import('../LaunchPrograms'));
 const Filters = dynamic(() => import('../Filters'));
 
-const BASE_URI = 'https://api.spaceXdata.com/v3/launches?limit=25';
+const BASE_URI = 'https://api.spaceXdata.com/v3/launches?limit=100';
 
 const LandingPage = () => {
   const [launchPrograms, setLaunchPrograms] = useState([]);
