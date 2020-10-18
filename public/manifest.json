@@ -8,9 +8,14 @@
     "orientation": "portrait-primary",
     "icons": [
       {
-        "src": "./favicon.ico",
+        "src": "/favicon.ico",
         "type": "image/png",
         "sizes": "72x72"
+      },
+      {
+        "src": "/rocket.png",
+        "sizes": "1024x1024 512x512 144x144 64x64 32x32 24x24 16x16",
+        "type": "image/png"
       }
     ]
   }

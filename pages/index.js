@@ -13,6 +13,7 @@ export default function App() {
         <meta name='theme-color' content='#90cdf4' />
         <link rel='apple-touch-icon' href='/logo-96x96.png' />
         <meta name='apple-mobile-web-app-status-bar' content='#90cdf4' />
+        <meta name="Description" content="SpaceX Launch Programs" />
       </Head>
       <main>
         <LandingPage />
