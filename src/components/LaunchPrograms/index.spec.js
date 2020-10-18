@@ -1,7 +1,11 @@
+import preloadAll from "jest-next-dynamic";
 import React from 'react';
 import { shallow } from 'enzyme';
 import LaunchPrograms from './index';
-import LaunchProgram from './Program';
+
+beforeAll(async () => {
+  await preloadAll();
+});
 
 describe('LaunchPrograms', () => {
   const props = {
@@ -18,6 +22,6 @@ describe('LaunchPrograms', () => {
   });
 
   it('Test to check LaunchProgram component renders', () => {
-    expect(component.find(LaunchProgram)).toHaveLength(1);
+    expect(component.find({ id: 'launchProgram' })).toHaveLength(1);
   });
 });

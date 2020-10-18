@@ -1,18 +1,37 @@
 import React from 'react';
-import FilterOnYears from './FilterOnYears';
-import FilterOnLaunch from './FilterOnLaunch';
-import FilterOnLanding from './FilterOnLanding';
+import dynamic from 'next/dynamic';
 
+const FilterOnYears = dynamic(() => import('./FilterOnYears'));
+const FilterOnLaunch = dynamic(() => import('./FilterOnLaunch'));
+const FilterOnLanding = dynamic(() => import('./FilterOnLanding'));
 
-const Filters = ({ onChangeYear, onChangeLaunchStatus, onChangeLandingStatus, changedYear, launchStatus, landingStatus }) => {
-    return (
-        <div>
-            <FilterOnYears onChangeYear={onChangeYear} changedYear={changedYear} />
-            <FilterOnLaunch onChangeLaunchStatus={onChangeLaunchStatus} launchStatus={launchStatus} />
-            <FilterOnLanding onChangeLandingStatus={onChangeLandingStatus} landingStatus={landingStatus} />
-        </div>
-    )
-}
+const Filters = ({
+  onChangeYear,
+  onChangeLaunchStatus,
+  onChangeLandingStatus,
+  changedYear,
+  launchStatus,
+  landingStatus,
+}) => {
+  return (
+    <div>
+      <FilterOnYears
+        id='filterOnYears'
+        onChangeYear={onChangeYear}
+        changedYear={changedYear}
+      />
+      <FilterOnLaunch
+        id='filterOnLaunch'
+        onChangeLaunchStatus={onChangeLaunchStatus}
+        launchStatus={launchStatus}
+      />
+      <FilterOnLanding
+        id='filterOnLanding'
+        onChangeLandingStatus={onChangeLandingStatus}
+        landingStatus={landingStatus}
+      />
+    </div>
+  );
+};
 
 export default Filters;
- 

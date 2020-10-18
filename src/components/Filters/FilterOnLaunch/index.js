@@ -1,9 +1,6 @@
 import React from 'react';
 
-const LAUNCH_STATUS = [
-  'True',
-  'False'
-]
+const LAUNCH_STATUS = ['True', 'False'];
 
 const FilterOnLaunch = ({ onChangeLaunchStatus, launchStatus }) => {
   return (
@@ -17,7 +14,9 @@ const FilterOnLaunch = ({ onChangeLaunchStatus, launchStatus }) => {
             key={status}
             type='button'
             value={status}
-            className={ launchStatus === status ? 'filter-btn btn-active' : 'filter-btn'}
+            className={
+              launchStatus === status ? 'filter-btn btn-active' : 'filter-btn'
+            }
             onClick={(e) => onChangeLaunchStatus(e)}
           />
         ))}

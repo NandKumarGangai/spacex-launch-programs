@@ -1,9 +1,6 @@
 import React from 'react';
 
-const LAUNCH_STATUS = [
-  'True',
-  'False'
-]
+const LAUNCH_STATUS = ['True', 'False'];
 
 const FilterOnLanding = ({ onChangeLandingStatus, landingStatus }) => {
   return (
@@ -17,7 +14,9 @@ const FilterOnLanding = ({ onChangeLandingStatus, landingStatus }) => {
             key={status}
             type='button'
             value={status}
-            className={ landingStatus === status ? 'filter-btn btn-active' : 'filter-btn'}
+            className={
+              landingStatus === status ? 'filter-btn btn-active' : 'filter-btn'
+            }
             onClick={(e) => onChangeLandingStatus(e)}
           />
         ))}

@@ -1,7 +1,9 @@
 import Head from 'next/head';
-import LandingPage from '../src/components/LandingPage';
+import dynamic from 'next/dynamic';
 
-export default function Home() {
+const LandingPage = dynamic(() => import('../src/components/LandingPage'));
+
+export default function App() {
   return (
     <div>
       <Head>

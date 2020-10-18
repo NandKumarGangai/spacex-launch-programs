@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import FilterOnYears from './index';
 
 describe('FilterOnYears', () => {
-
   const component = shallow(<FilterOnYears />);
 
   it('Test to check component renders', () => {

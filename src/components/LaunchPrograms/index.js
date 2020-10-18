@@ -1,6 +1,8 @@
 import React from 'react';
-import LaunchProgram from './Program';
+import dynamic from 'next/dynamic';
 import './style.module.scss';
+
+const LaunchProgram = dynamic(() => import('./Program'));
 
 const LaunchPrograms = ({ launchPrograms = [], error }) => {
   return (
@@ -8,7 +10,7 @@ const LaunchPrograms = ({ launchPrograms = [], error }) => {
       {!error ? (
         <div>
           {launchPrograms.length > 0 ? (
-            <div className='lp-container'>
+            <div className='lp-container' id='launchProgram'>
               {launchPrograms.map((program) => (
                 <LaunchProgram program={program} key={program.mission_name} />
               ))}

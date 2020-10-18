@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import FilterOnLaunch from './index';
 
 describe('FilterOnLaunch', () => {
-
   const component = shallow(<FilterOnLaunch />);
 
   it('Test to check component renders', () => {

@@ -30,7 +30,9 @@ const FilterOnYears = ({ onChangeYear, changedYear }) => {
             key={year}
             type='button'
             value={year}
-            className={ changedYear === year ? 'filter-btn btn-active' : 'filter-btn'}
+            className={
+              changedYear === year ? 'filter-btn btn-active' : 'filter-btn'
+            }
             onClick={(e) => onChangeYear(e)}
           />
         ))}

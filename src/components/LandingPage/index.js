@@ -1,8 +1,11 @@
 import axios from 'axios';
+import dynamic from 'next/dynamic';
 import React, { useState, useEffect } from 'react';
-import LaunchPrograms from '../LaunchPrograms';
-import Filters from '../Filters';
+
 import './style.module.scss';
+
+const LaunchPrograms = dynamic(() => import('../LaunchPrograms'));
+const Filters = dynamic(() => import('../Filters'));
 
 const BASE_URI = 'https://api.spaceXdata.com/v3/launches?limit=25';
 
@@ -81,7 +84,7 @@ const LandingPage = () => {
         <h1>SpaceX Launch Programs</h1>
       </header>
       <div className='container'>
-        <div className='filters'>
+        <div className='filters' id='filters'>
           <Filters
             onChangeYear={onChangeYear}
             onChangeLaunchStatus={onChangeLaunchStatus}
@@ -93,12 +96,18 @@ const LandingPage = () => {
         </div>
         <div className='content'>
           {!loading ? (
-            <LaunchPrograms launchPrograms={launchPrograms} error={error} />
-          ) : (<h3>Loading...</h3>)}
+            <div id='launchPrograms'>
+              <LaunchPrograms launchPrograms={launchPrograms} error={error} />
+            </div>
+          ) : (
+            <h3 className='.content-center'>Loading...</h3>
+          )}
         </div>
       </div>
       <footer className='footer'>
-        <span>Developed by: <strong>Nandkumar Gangai</strong></span>
+        <span>
+          Developed by: <strong>Nandkumar Gangai</strong>
+        </span>
       </footer>
     </>
   );
